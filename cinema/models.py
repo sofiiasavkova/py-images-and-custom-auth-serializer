@@ -54,7 +54,7 @@ class Movie(models.Model):
     genres = models.ManyToManyField(Genre)
     actors = models.ManyToManyField(Actor)
     image = models.ImageField(
-        upload_to="uploads/movies/",
+        upload_to=movie_image_path,
         blank=True,
         null=True
     )
